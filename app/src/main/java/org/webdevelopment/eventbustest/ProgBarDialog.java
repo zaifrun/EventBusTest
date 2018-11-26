@@ -6,10 +6,10 @@ import android.widget.ProgressBar;
 
 public class ProgBarDialog extends Dialog {
 	
-    Context context;
-    static ProgressBar bar;
-    int max;
-    String title = null;
+    private Context context;
+    private ProgressBar bar;
+    private int max;
+    private String title = null;
 
 	public ProgBarDialog(Context context, int maximum) {
 	
@@ -82,7 +82,7 @@ public class ProgBarDialog extends Dialog {
 		else
 			setTitle(title);
 		
-		bar = (ProgressBar) findViewById(R.id.progbar);
+		bar = findViewById(R.id.progbar);
 		if (bar!=null)
 			bar.setMax(max);
 		else

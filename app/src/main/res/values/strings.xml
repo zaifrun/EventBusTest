@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EventBusTest</string>
+    <string name="task_cancelled">task cancelled</string>
 </resources>

@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             progDialog.setBar(progress);
         }
 
-        Button cancelButton = (Button) findViewById(R.id.cancelButton);
+        Button cancelButton = findViewById(R.id.cancelButton);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,13 +52,15 @@ public class MainActivity extends AppCompatActivity {
                         progDialog.dismiss();
                     progress=0;
                     eventStarted=false;
+                    TextView result = findViewById(R.id.resultView);
+                    result.setText(R.string.task_cancelled);
 
                 } else
                     Toast.makeText(context,"nothing to cancel!",Toast.LENGTH_SHORT).show();
             }
         });
 
-        Button button = (Button) findViewById(R.id.startButton);
+        Button button = findViewById(R.id.startButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         eventStarted = false; //not running - we are finished
         if (progDialog!=null)
             progDialog.dismiss();; //done showing progress
-        TextView result = (TextView) findViewById(R.id.resultView);
+        TextView result = findViewById(R.id.resultView);
         result.setText(event.getMessage());
         System.out.println("Got messsage");
     }

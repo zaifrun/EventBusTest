@@ -12,7 +12,7 @@ public class MyTask extends AsyncTask<Void,Integer,String> {
     protected String doInBackground(Void... params) {
         for (int i = 0; i<100; i++) {
             try {
-                Thread.sleep(1 * 50);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
